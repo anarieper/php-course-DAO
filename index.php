@@ -8,8 +8,29 @@ require_once("config.php");
 
 // echo json_encode($usuarios);
 
-$root = new Usuario();
+// Carrega apenas um usuário 
 
-$root->loadById(2);
+// $root = new Usuario();
 
-echo $root;
+// $root->loadById(2);
+
+// echo $root;
+
+//Carrega uma lista inteira 
+
+// $list = Usuario::getList();
+
+// echo json_encode( $list);
+
+// Carrega uma lista de usuários buscando pelo login:
+
+// $search = Usuario::search("sq");
+
+// echo json_encode($search);
+
+//Carrega um usuário usando login e senha:
+
+$usuario = new Usuario();
+$usuario->login("sqlserver", "a1b2c3");
+
+echo $usuario;
